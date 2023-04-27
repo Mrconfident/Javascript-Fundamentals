@@ -23,4 +23,8 @@ tellMeWhenDone(function () {
   console.log("Hello")
 })
 
+tellMeWhenDone(function() {
+  alert('Hello I am Tarun')
+})
+
 
