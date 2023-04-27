@@ -14,6 +14,8 @@ var logName = function (lang1, lang2) {
 
 logName.bind(person)() // Binding An Object To a Function(which is an Object in JS)
 
+// After Binding it will return the Updated Reference of that Function
+
 
 var check = function (check1, check2) {
   console.log('Name of the Person Who is Checking', this.getFullName())
@@ -41,25 +43,31 @@ check.apply(person, [1, 2])
 
 
 
-// Real Life Uses of Call Apply Bind
 
-function car (type, fuelType) {
-  console.log(this)
-  this.type = type,
-  this.fuelType = fuelType
+// Problem Statement  and Best Example So Far
+
+let userDetails = {
+  name: 'Tarun Lunia',
+  age: 25,
+  designation: 'SDE',
+  printDetails: function() {
+    console.log(this.name +  ' ' + this.age + ' ' + this.designation)
+  }
 }
 
+userDetails.printDetails()
 
-function setBrand (brand) {
-  car.call(this, 'convertible', 'petrol')
-  this.brand = brand
-  console.log(this)
+
+let userDetails2 = {
+  name: 'Shyamu Lunia',
+  age: 32,
+  designation: 'Home Minister',
+  printDetails: function() {
+    console.log(this.name +  ' ' + this.age + ' ' + this.designation)
+  }
 }
 
-function definePrice(price){
-	car.call(this, "convertible", "diesel");
-	this.price = price;
-	console.log(`Car details = `, this);
-}
-const newBrand = new setBrand('Brand1');
-const newCarPrice = new definePrice(100000);
+// userDetails.printDetails.call(userDetails2) // Function Borrowing
+
+const a = userDetails.printDetails.bind(userDetails2)
+a()

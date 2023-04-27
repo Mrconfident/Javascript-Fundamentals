@@ -71,3 +71,6 @@ console.log(sum5)
 // for (var j = 0; j<3 ;j++) {
 //   res[j]()
 // }
+
+
+// IMP: lexical scope refers to the ability of a function scope to access variables from the parent scope.
