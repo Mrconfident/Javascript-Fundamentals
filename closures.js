@@ -52,3 +52,22 @@ const sum4 = sum3();
 const sum5 = sum4();
 
 console.log(sum5)
+
+
+
+// function check() {
+//   var arr = []
+
+//   for (var i = 0; i<3 ;i++) {
+//     arr.push(function() {
+//       console.log(i)
+//     })
+//   }
+//   return arr
+// }
+
+// var res = check()
+// console.log(res)
+// for (var j = 0; j<3 ;j++) {
+//   res[j]()
+// }
