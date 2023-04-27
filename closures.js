@@ -21,16 +21,16 @@ function buildFunctions () {
     arr.push(
       (function() {
         console.log(i)
-      })()
+      })() // making this IIFE will execute it right away.
     )
   }
   return arr
 }
 var fs = buildFunctions();
 
-for (var i = 0; i<4; i++) {
-  fs[i];
-}
+// for (var i = 0; i<4; i++) {
+//   fs[i];
+// }
 
 
 // Some classic Examples of Closures
